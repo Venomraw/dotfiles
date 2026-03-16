@@ -32,3 +32,24 @@ alias chgrp='chgrp --preserve-root'
 
 # Resume downloads by default
 alias wget='wget -c'
+
+# ---------------------------------------------------------------------------
+# HISTORY
+# ---------------------------------------------------------------------------
+alias h='history'
+alias hgrep='history | grep'
+
+# ---------------------------------------------------------------------------
+# GIT SHORTCUTS
+# ---------------------------------------------------------------------------
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate'
+alias gd='git diff'
+alias gb='git branch'
+alias gco='git checkout'
+alias gpull='git pull'
+
