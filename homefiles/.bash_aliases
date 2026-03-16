@@ -53,3 +53,10 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gpull='git pull'
 
+# ---------------------------------------------------------------------------
+# NETWORKING
+# ---------------------------------------------------------------------------
+alias myip='curl ifconfig.me'
+alias ports='sudo netstat -tulanp'
+alias ping5='ping -c 5'
+alias update='sudo apt update && sudo apt upgrade -y'
