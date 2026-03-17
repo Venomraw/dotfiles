@@ -60,3 +60,42 @@ alias myip='curl ifconfig.me'
 alias ports='sudo netstat -tulanp'
 alias ping5='ping -c 5'
 alias update='sudo apt update && sudo apt upgrade -y'
+
+# ---------------------------------------------------------------------------
+# EXTRACT FUNCTION - from "The Ultimate .bashrc" by zachbrowne
+# https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c
+# Universal archive extractor
+# ---------------------------------------------------------------------------
+extract() {
+    if [ -f "$1" ]; then
+        case "$1" in
+            *.tar.bz2)   tar xjf "$1"    ;;
+            *.tar.gz)    tar xzf "$1"    ;;
+            *.tar.xz)    tar xJf "$1"    ;;
+            *.bz2)       bunzip2 "$1"    ;;
+            *.rar)       unrar x "$1"    ;;
+            *.gz)        gunzip "$1"     ;;
+            *.tar)       tar xf "$1"     ;;
+            *.tbz2)      tar xjf "$1"    ;;
+            *.tgz)       tar xzf "$1"    ;;
+            *.zip)       unzip "$1"      ;;
+            *.Z)         uncompress "$1" ;;
+            *.7z)        7z x "$1"       ;;
+            *)           echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# ---------------------------------------------------------------------------
+# COLORED MAN PAGES - from "The Ultimate .bashrc" by zachbrowne
+# Makes man pages easier to read with color highlighting
+# ---------------------------------------------------------------------------
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
