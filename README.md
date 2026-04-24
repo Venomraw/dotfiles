@@ -30,7 +30,17 @@ cd ../vim-config && chmod +x install.sh && ./install.sh
 # Install AWS CLI (requires sudo)
 cd ../sys-installs && chmod +x install-awscli.sh && sudo ./install-awscli.sh
 ```
+## Notes for Future Improvement
 
+- Add a master install script at the repo root that runs all individual install scripts in sequence
+- Add `.gitconfig` and `.ssh/config` templates to `homefiles/`
+- Add support for other package managers (`dnf`, `pacman`) in the sys-installs scripts
+- Add a script to automatically detect the system architecture (x86_64 vs ARM) for AWS CLI downloads
+- Add more sys-install scripts for other tools (e.g., Ansible, Docker, Wireshark)
+- Add an uninstall script for AWS CLI
+- Set up a cron job or shell hook to periodically pull dotfile updates from the repo
+
+  
 ## Author
 
 Venomraw
